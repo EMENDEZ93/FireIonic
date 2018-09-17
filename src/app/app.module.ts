@@ -14,6 +14,8 @@ import {FIREBASE_CONFIG} from "./app.firebase.config";
 import {LoginPage} from "../pages/login/login";
 import {RegisterPage} from "../pages/register/register";
 import {NotesPage} from "../pages/notes/notes";
+import { NoteProvider } from '../providers/note/note';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import {NotesPage} from "../pages/notes/notes";
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -39,7 +42,8 @@ import {NotesPage} from "../pages/notes/notes";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NoteProvider
   ]
 })
 export class AppModule {}
