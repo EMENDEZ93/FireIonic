@@ -23,8 +23,8 @@ export class NotesPage {
     );
   }
 
-  noteForm(id){
-    this.navCtrl.push(NoteFormPage,{id: id})
+  noteForm(note){
+    this.navCtrl.push(NoteFormPage,{note: note})
   }
 
 }

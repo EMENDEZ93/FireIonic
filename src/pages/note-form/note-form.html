@@ -7,12 +7,27 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>note {{id}}</ion-title>
+    <ion-title>{{note.id}} | {{note.description}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Descriptión</ion-label>
+      <ion-input type="text" [(ngModel)]="note.description"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>end date</ion-label>
+      <ion-input type="text" [(ngModel)]="note.endDate"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button block (click)="deleteNote()">Eliminar Nota</button>
 
 </ion-content>

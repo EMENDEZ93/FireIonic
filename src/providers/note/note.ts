@@ -13,8 +13,8 @@ export class NoteProvider {
     return this.http.get("https://fire-backend.herokuapp.com/notes");
   }
 
-  getNote(id){
-    return this.http.get("https://fire-backend.herokuapp.com/note/" +id);
+  deleteNote(id){
+    return this.http.get("https://fire-backend.herokuapp.com/note/" +id+"/delete");
   }
 
 }
