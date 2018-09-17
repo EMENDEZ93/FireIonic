@@ -16,13 +16,15 @@ import {RegisterPage} from "../pages/register/register";
 import {NotesPage} from "../pages/notes/notes";
 import { NoteProvider } from '../providers/note/note';
 import { HttpClientModule } from "@angular/common/http";
+import {NoteFormPage} from "../pages/note-form/note-form";
 
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
     RegisterPage,
-    NotesPage
+    NotesPage,
+    NoteFormPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { HttpClientModule } from "@angular/common/http";
     MyApp,
     LoginPage,
     RegisterPage,
-    NotesPage
+    NotesPage,
+    NoteFormPage
   ],
   providers: [
     StatusBar,
