@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{note.id}} | {{note.description}}</ion-title>
+    <ion-title>{{note.id}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -22,13 +22,18 @@
     </ion-item>
 
     <ion-item>
-      <ion-label floating>end date</ion-label>
-      <ion-input type="text" [(ngModel)]="note.endDate"></ion-input>
+      <ion-label>Ends Time</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="note.endTime" ></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Ends Date</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="note.endDate"></ion-datetime>
     </ion-item>
 
   </ion-list>
 
-  <button ion-button block (click)="saveNote()">Eliminar Nota</button>
-  <button ion-button block (click)="deleteNote()">Eliminar Nota</button>
+  <button ion-button block (click)="saveNote()">Guardar Nota</button>
+  <button ion-button block *ngIf="note.id" (click)="deleteNote()">Eliminar Nota</button>
 
 </ion-content>

@@ -9,8 +9,10 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-item *ngFor="let note of notes" (click)="noteForm(note)">
+    <button ion-item *ngFor="let note of notes" (click)="editNoteForm(note)">
       {{note.id}} - {{note.description}}
     </button>
   </ion-list>
+
+  <button ion-button block (click)="newNoteForm()">Nueva Nota</button>
 </ion-content>

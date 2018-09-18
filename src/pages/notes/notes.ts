@@ -23,8 +23,18 @@ export class NotesPage {
     );
   }
 
-  noteForm(note){
+  editNoteForm(note){
     this.navCtrl.push(NoteFormPage,{note: note})
+  }
+
+
+  newNoteForm(){
+    this.navCtrl.push(NoteFormPage
+      ,{note: {}})
+  }
+
+  saveNote(){
+    console.log("edwin")
   }
 
 }
