@@ -30,11 +30,8 @@ export class NotesPage {
 
   newNoteForm(){
     this.navCtrl.push(NoteFormPage
-      ,{note: {}})
+      ,{note : {}})
   }
 
-  saveNote(){
-    console.log("edwin")
-  }
 
 }

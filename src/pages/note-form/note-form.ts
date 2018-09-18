@@ -24,4 +24,8 @@ export class NoteFormPage {
     this.navCtrl.push(NotesPage);
   }
 
+  saveNote(note){
+    console.log(note)
+  }
+
 }
