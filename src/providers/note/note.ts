@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClientModule } from "@angular/common/http";
+import {Observable} from 'rxjs';
 
 @Injectable()
 export class NoteProvider {
@@ -15,6 +15,14 @@ export class NoteProvider {
 
   deleteNote(id){
     return this.http.get("https://fire-backend.herokuapp.com/note/" +id+"/delete");
+  }
+
+  saveNote(note) {
+
+    const httpOptions = { headers: new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'})};
+    return this.http
+      .post('https://fire-backend.herokuapp.com/note/save',
+        JSON.stringify(note), httpOptions).subscribe();
   }
 
 }
