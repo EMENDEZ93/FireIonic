@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {NoteProvider} from "../../providers/note/note";
 import {NotesPage} from "../notes/notes";
+import firebase from "firebase";
 
 @IonicPage()
 @Component({
@@ -25,9 +26,11 @@ export class NoteFormPage {
   }
 
   saveNote(note){
+    if(!note.idFirebase) {
+      note.idFirebase = firebase.auth().currentUser.uid;
+    }
     this.noteProvider.saveNote(note);
     this.navCtrl.push(NotesPage);
-
   }
 
 }
