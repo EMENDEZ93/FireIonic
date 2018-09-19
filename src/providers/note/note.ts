@@ -9,8 +9,8 @@ export class NoteProvider {
     console.log('Hello NoteProvider Provider');
   }
 
-  getNotes(){
-    return this.http.get("https://fire-backend.herokuapp.com/notes");
+  getNotesByIdFirabase(idFirebase){
+    return this.http.get("https://fire-backend.herokuapp.com/notes/user/"+idFirebase);
   }
 
   deleteNote(id){
