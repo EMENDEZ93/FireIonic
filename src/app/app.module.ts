@@ -14,9 +14,10 @@ import {FIREBASE_CONFIG} from "./app.firebase.config";
 import {LoginPage} from "../pages/login/login";
 import {RegisterPage} from "../pages/register/register";
 import {NotesPage} from "../pages/notes/notes";
-import { NoteProvider } from '../providers/note/note';
+import { NoteProvider } from '../services/note/note';
 import { HttpClientModule } from "@angular/common/http";
 import {NoteFormPage} from "../pages/note-form/note-form";
+import {RegisterService} from "../services/register/register.service";
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {NoteFormPage} from "../pages/note-form/note-form";
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    NoteProvider
+    NoteProvider,
+    RegisterService
   ]
 })
 export class AppModule {}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { NoteProvider } from "../../providers/note/note";
+import { NoteProvider } from "../../services/note/note";
 import {NoteFormPage} from "../note-form/note-form";
 import firebase from 'firebase';
 
