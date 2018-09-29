@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the NotesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {NotesService} from "../../services/tabs/notes/notes.service";
+import firebase from 'firebase';
 
 @IonicPage()
 @Component({
@@ -15,11 +10,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NotesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  notes;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public notesService: NotesService) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NotesPage');
+  }
+
+  ionViewWillEnter(){
+    this.notesService.getNotesByIdFirabase(firebase.auth().currentUser.uid).subscribe(
+      (data) =>{ this.notes = data; },
+      (error) => {console.log(error)}
+    );
   }
 
 }

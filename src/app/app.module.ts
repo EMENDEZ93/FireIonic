@@ -24,6 +24,7 @@ import {NotesPageModule} from "../pages/notes/notes.module";
 import {FriendsPageModule} from "../pages/friends/friends.module";
 import {SettingPageModule} from "../pages/setting/setting.module";
 import {CalendarPageModule} from "../pages/calendar/calendar.module";
+import {NotesService} from "../services/tabs/notes/notes.service";
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import {CalendarPageModule} from "../pages/calendar/calendar.module";
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NoteProvider,
-    RegisterService
+    RegisterService,
+    NotesService
   ]
 })
 export class AppModule {}
