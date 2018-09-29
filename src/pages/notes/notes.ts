@@ -17,7 +17,7 @@ export class NotesPage {
               public noteProvider: NoteProvider) {
   }
 
-  ionViewDidLoad() {
+  ionViewWillEnter(){
     this.noteProvider.getNotesByIdFirabase(firebase.auth().currentUser.uid).subscribe(
       (data) =>{ this.notes = data; },
       (error) => {console.log(error)}
