@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {User} from "../../models/user/user";
 import {RegisterPage} from "../register/register";
 import { AngularFireAuth } from '@angular/fire/auth';
-import {NotesPage} from "../notes/notes";
+import {TabsPage} from "../tabs/tabs";
 
 @IonicPage()
 @Component({
@@ -23,7 +23,7 @@ export class LoginPage {
     try {
        const result = this.firebaseAuth.auth.signInWithEmailAndPassword(user.email, user.password);
        if(result) {
-         this.navCtrl.setRoot(NotesPage);
+         this.navCtrl.setRoot(TabsPage);
        }
     }catch (e) {
       console.error(e);

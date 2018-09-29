@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the NotesPage page.
+ * Generated class for the FriendsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-notes',
-  templateUrl: 'notes.html',
+  selector: 'page-friends',
+  templateUrl: 'friends.html',
 })
-export class NotesPage {
+export class FriendsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NotesPage');
+    console.log('ionViewDidLoad FriendsPage');
   }
 
 }
