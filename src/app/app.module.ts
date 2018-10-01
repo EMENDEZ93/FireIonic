@@ -25,14 +25,13 @@ import {FriendsPageModule} from "../pages/friends/friends.module";
 import {SettingPageModule} from "../pages/setting/setting.module";
 import {CalendarPageModule} from "../pages/calendar/calendar.module";
 import {NotesService} from "../services/tabs/notes/notes.service";
+import {FriendsService} from "../services/tabs/friends/friends.service";
 
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
-    RegisterPage,
-  //  NotesPage,
-    //NoteFormPage
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -53,9 +52,7 @@ import {NotesService} from "../services/tabs/notes/notes.service";
   entryComponents: [
     MyApp,
     LoginPage,
-    RegisterPage,
-    //NotesPage,
-    //NoteFormPage
+    RegisterPage
   ],
   providers: [
     StatusBar,
@@ -63,7 +60,8 @@ import {NotesService} from "../services/tabs/notes/notes.service";
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NoteProvider,
     RegisterService,
-    NotesService
+    NotesService,
+    FriendsService
   ]
 })
 export class AppModule {}

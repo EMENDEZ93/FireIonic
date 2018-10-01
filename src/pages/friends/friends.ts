@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the FriendsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {FriendsService} from "../../services/tabs/friends/friends.service";
 
 @IonicPage()
 @Component({
@@ -15,11 +9,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FriendsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  friends;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public friendsService: FriendsService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FriendsPage');
   }
+
+  ionViewWillEnter(){
+    this.friendsService.getFriends().subscribe(
+      (friends) =>{ this.friends = friends; },
+      (error) => {console.log(error)}
+    );
+  }
+
 
 }
