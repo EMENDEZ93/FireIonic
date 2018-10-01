@@ -35,4 +35,15 @@ export class NotesPage {
     })
   }
 
+
+  deleteNote(id){
+    this.notesService.deleteNote(id).subscribe(value => {
+      this.ionViewWillEnter();
+    });
+  }
+
+  createNote(){
+    this.editNoteForm({});
+  }
+
 }
