@@ -30,6 +30,9 @@ export class NotesPage {
   editNoteForm(note){
     const noteFormPageModal = this.modal.create('NoteFormPage', {note: note});
     noteFormPageModal.present();
+    noteFormPageModal.onDidDismiss((data) => {
+      this.ionViewWillEnter();
+    })
   }
 
 }

@@ -19,7 +19,6 @@ export class NoteFormPage {
 
   ionViewWillLoad() {
     const note = this.navParams.get('note');
-    console.log(note);
   }
 
   deleteNote(){
