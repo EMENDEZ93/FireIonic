@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {FriendsService} from "../../services/tabs/friends/friends.service";
+import {FriendsService} from "../../../services/tabs/friends/friends.service";
 
 @IonicPage()
 @Component({

@@ -13,17 +13,15 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import {FIREBASE_CONFIG} from "./app.firebase.config";
 import {LoginPage} from "../pages/login/login";
 import {RegisterPage} from "../pages/register/register";
-//import {NotesPage} from "../pages/notes/notes";
 import { NoteProvider } from '../services/note/note';
 import { HttpClientModule } from "@angular/common/http";
-import {NoteFormPage} from "../pages/note-form/note-form";
 import {RegisterService} from "../services/register/register.service";
 
-import {TabsPageModule} from "../pages/tabs/tabs.module";
-import {NotesPageModule} from "../pages/notes/notes.module";
-import {FriendsPageModule} from "../pages/friends/friends.module";
-import {SettingPageModule} from "../pages/setting/setting.module";
-import {CalendarPageModule} from "../pages/calendar/calendar.module";
+import {TabsPageModule} from "../pages/tabs/tabs/tabs.module";
+import {NotesPageModule} from "../pages/tabs/notes/notes/notes.module";
+import {FriendsPageModule} from "../pages/tabs/friends/friends.module";
+import {SettingPageModule} from "../pages/tabs/setting/setting.module";
+import {CalendarPageModule} from "../pages/tabs/calendar/calendar.module";
 import {NotesService} from "../services/tabs/notes/notes.service";
 import {FriendsService} from "../services/tabs/friends/friends.service";
 

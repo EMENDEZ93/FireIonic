@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {User} from "../../models/user/user";
 import {RegisterPage} from "../register/register";
 import { AngularFireAuth } from '@angular/fire/auth';
-import {TabsPage} from "../tabs/tabs";
+import {TabsPage} from "../tabs/tabs/tabs";
 
 @IonicPage()
 @Component({

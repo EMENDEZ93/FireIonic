@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
-import {NotesService} from "../../services/tabs/notes/notes.service";
+import {NotesService} from "../../../../services/tabs/notes/notes.service";
 import firebase from 'firebase';
 
 @IonicPage()
