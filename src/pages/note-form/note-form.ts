@@ -36,7 +36,7 @@ export class NoteFormPage {
   }
 
   closeNoteFormModal(){
-    this.viewController.dismiss();
+    this.navCtrl.pop();
   }
 
 }

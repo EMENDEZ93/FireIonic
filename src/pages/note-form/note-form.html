@@ -7,6 +7,8 @@
       <button ion-button (click)="closeNoteFormModal()" >Cancelar</button>
     </ion-buttons>
 
+
+
   </ion-navbar>
 
 </ion-header>
@@ -26,22 +28,22 @@
     </ion-item>
 
     <ion-item>
-      <ion-label>Start Date</ion-label>
+      <ion-label floating>Start Date</ion-label>
       <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="note.startDate" ></ion-datetime>
     </ion-item>
 
     <ion-item>
-      <ion-label>startTime</ion-label>
+      <ion-label floating>startTime</ion-label>
       <ion-datetime displayFormat="hh:mm A" pickerFormat="hh:mm A" [(ngModel)]="note.startTime" ></ion-datetime>
     </ion-item>
 
     <ion-item>
-      <ion-label>Ends Date</ion-label>
+      <ion-label floating>Ends Date</ion-label>
       <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="note.endDate" ></ion-datetime>
     </ion-item>
 
     <ion-item>
-      <ion-label>Ends Time</ion-label>
+      <ion-label floating>Ends Time</ion-label>
       <ion-datetime displayFormat="hh:mm A" pickerFormat="hh:mm A" [(ngModel)]="note.endTime" ></ion-datetime>
     </ion-item>
 
