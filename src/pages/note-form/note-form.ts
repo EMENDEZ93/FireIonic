@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import {NoteProvider} from "../../services/note/note";
 import {NotesPage} from "../notes/notes";
 import firebase from "firebase";
@@ -13,11 +13,13 @@ export class NoteFormPage {
 
   note
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              public noteProvider: NoteProvider) {
+              public noteProvider: NoteProvider, public viewController: ViewController) {
     this.note = this.navParams.get("note");
   }
 
-  ionViewDidLoad() {
+  ionViewWillLoad() {
+    const note = this.navParams.get('note');
+    console.log(note);
   }
 
   deleteNote(){
@@ -30,7 +32,11 @@ export class NoteFormPage {
       note.idFirebase = firebase.auth().currentUser.uid;
     }
     this.noteProvider.saveNote(note);
-    this.navCtrl.push(NotesPage);
+    this.navCtrl.pop();
+  }
+
+  closeNoteFormModal(){
+    this.viewController.dismiss();
   }
 
 }

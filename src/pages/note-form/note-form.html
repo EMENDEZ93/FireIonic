@@ -1,7 +1,12 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{note.id}}</ion-title>
+    <ion-title></ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="closeNoteFormModal()" >Cancelar</button>
+    </ion-buttons>
+
   </ion-navbar>
 
 </ion-header>
@@ -12,27 +17,27 @@
 
     <ion-item>
       <ion-label floating>Titulo</ion-label>
-      <ion-input type="text" [(ngModel)]="note.title"></ion-input>
+      <ion-input type="text"  [(ngModel)]="note.title" ></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label floating>Descriptión</ion-label>
-      <ion-input type="text" [(ngModel)]="note.description"></ion-input>
+      <ion-input type="text" [(ngModel)]="note.description" ></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label>Start Date</ion-label>
-      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="note.startDate"></ion-datetime>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="note.startDate" ></ion-datetime>
     </ion-item>
 
     <ion-item>
-      <ion-label>{{note.startTime}}</ion-label>
-      <ion-datetime displayFormat="hh:mm A" pickerFormat="h mm A" [(ngModel)]="note.startTime" ></ion-datetime>
+      <ion-label>startTime</ion-label>
+      <ion-datetime displayFormat="hh:mm A" pickerFormat="hh:mm A" [(ngModel)]="note.startTime" ></ion-datetime>
     </ion-item>
 
     <ion-item>
       <ion-label>Ends Date</ion-label>
-      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="note.endDate"></ion-datetime>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="note.endDate" ></ion-datetime>
     </ion-item>
 
     <ion-item>
@@ -43,6 +48,5 @@
   </ion-list>
 
   <button ion-button block (click)="saveNote(note)">Guardar Nota</button>
-  <button ion-button block *ngIf="note.id" (click)="deleteNote()">Eliminar Nota</button>
 
 </ion-content>

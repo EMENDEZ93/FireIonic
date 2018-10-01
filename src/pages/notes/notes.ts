@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import {NotesService} from "../../services/tabs/notes/notes.service";
 import firebase from 'firebase';
 
@@ -12,7 +12,8 @@ export class NotesPage {
 
   notes;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public notesService: NotesService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public notesService: NotesService,
+              public modal: ModalController) {
   }
 
   ionViewDidLoad() {
@@ -23,6 +24,12 @@ export class NotesPage {
       (data) =>{ this.notes = data; },
       (error) => {console.log(error)}
     );
+  }
+
+
+  editNoteForm(note){
+    const noteFormPageModal = this.modal.create('NoteFormPage', {note: note});
+    noteFormPageModal.present();
   }
 
 }

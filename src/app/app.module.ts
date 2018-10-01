@@ -32,7 +32,7 @@ import {NotesService} from "../services/tabs/notes/notes.service";
     LoginPage,
     RegisterPage,
   //  NotesPage,
-    NoteFormPage
+    //NoteFormPage
   ],
   imports: [
     BrowserModule,
@@ -55,7 +55,7 @@ import {NotesService} from "../services/tabs/notes/notes.service";
     LoginPage,
     RegisterPage,
     //NotesPage,
-    NoteFormPage
+    //NoteFormPage
   ],
   providers: [
     StatusBar,
