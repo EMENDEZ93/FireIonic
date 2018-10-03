@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>friend_request</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="closeFriendRequestPageModal()" >Cancelar</button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label floating>Buscar</ion-label>
+    <ion-input type="text" [(ngModel)]="search_value" text-right (ionChange)="searcher()" ></ion-input>
+  </ion-item>
+
+  <ion-list>
+
+    <ion-card ion-item *ngFor="let found_user of found_users">
+      <!--img src="assets/img/bjork-live.jpg" -->
+      <ion-item>
+
+        <ion-card-title>
+          {{found_user.name}}
+          <p>{{found_user.email}}</p>
+        </ion-card-title>
+
+        <button ion-fab mini item-end ><ion-icon name="person-add"></ion-icon></button>
+
+      </ion-item>
+
+    </ion-card>
+
+  </ion-list>
+
+</ion-content>

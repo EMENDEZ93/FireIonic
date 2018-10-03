@@ -10,4 +10,8 @@ export class FriendsService {
     return this.httpClient.get("https://fire-backend.herokuapp.com/users")
   }
 
+  getFindFriends(search_value){
+    return this.httpClient.get("https://fire-backend.herokuapp.com/get/find/friends/" + search_value)
+  }
+
 }

@@ -19,7 +19,7 @@ import {RegisterService} from "../services/register/register.service";
 
 import {TabsPageModule} from "../pages/tabs/tabs/tabs.module";
 import {NotesPageModule} from "../pages/tabs/notes/notes/notes.module";
-import {FriendsPageModule} from "../pages/tabs/friends/friends.module";
+import {FriendsPageModule} from "../pages/tabs/friends/friends/friends.module";
 import {SettingPageModule} from "../pages/tabs/setting/setting.module";
 import {CalendarPageModule} from "../pages/tabs/calendar/calendar.module";
 import {NotesService} from "../services/tabs/notes/notes.service";

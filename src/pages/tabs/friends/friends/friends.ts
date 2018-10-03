@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {FriendsService} from "../../../services/tabs/friends/friends.service";
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import {FriendsService} from "../../../../services/tabs/friends/friends.service";
 
 @IonicPage()
 @Component({
@@ -12,7 +12,7 @@ export class FriendsPage {
   friends;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              public friendsService: FriendsService) {
+              public friendsService: FriendsService, public modal: ModalController) {
   }
 
   ionViewDidLoad() {
@@ -24,6 +24,11 @@ export class FriendsPage {
       (friends) =>{ this.friends = friends; },
       (error) => {console.log(error)}
     );
+  }
+
+  getFindPerson(){
+    const friendRequestPageModal = this.modal.create('FriendRequestPage');
+    friendRequestPageModal.present();
   }
 
 
