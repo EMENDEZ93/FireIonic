@@ -28,9 +28,10 @@
         <ion-card-title>
           {{found_user.name}}
           <p>{{found_user.email}}</p>
+
         </ion-card-title>
 
-        <button ion-fab mini item-end ><ion-icon name="person-add"></ion-icon></button>
+        <button ion-fab mini item-end (click)="sendFriendRequest(found_user.email)" ><ion-icon name="person-add"></ion-icon></button>
 
       </ion-item>
 

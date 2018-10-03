@@ -26,10 +26,14 @@ export class FriendsPage {
     );
   }
 
-  getFindPerson(){
+  getFindFriendModal(){
     const friendRequestPageModal = this.modal.create('FriendRequestPage');
     friendRequestPageModal.present();
   }
 
+  getPendingFriendRequestModal(){
+    const pendingRequestPageModal = this.modal.create('PendingRequestPage');
+    pendingRequestPageModal.present();
+  }
 
 }
