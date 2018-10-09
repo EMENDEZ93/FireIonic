@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import {FriendsService} from "../../../../services/tabs/friends/friends.service";
+import firebase from 'firebase';
 
 @IonicPage()
 @Component({
@@ -20,7 +21,7 @@ export class FriendsPage {
   }
 
   ionViewWillEnter(){
-    this.friendsService.getFriends().subscribe(
+    this.friendsService.getFriends(firebase.auth().currentUser.email).subscribe(
       (friends) =>{ this.friends = friends; },
       (error) => {console.log(error)}
     );

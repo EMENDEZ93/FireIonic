@@ -7,8 +7,8 @@ export class FriendsService {
 
   constructor(public httpClient: HttpClient){}
 
-  getFriends(){
-    return this.httpClient.get("https://fire-backend.herokuapp.com/users")
+  getFriends(requester_email){
+    return this.httpClient.get("https://fire-backend.herokuapp.com/get/all/friends/by/requester/email/" + requester_email)
   }
 
   getFindFriends(search_value){
