@@ -15,4 +15,20 @@
 
 <ion-content padding>
 
+  <ion-list>
+    <ion-card ion-item *ngFor="let friend of friends">
+      <!--img src="assets/img/bjork-live.jpg" -->
+      <ion-item>
+
+        <ion-card-title>
+          {{friend.name}}
+          <p>{{friend.email}}</p>
+        </ion-card-title>
+
+        <button ion-fab mini item-end ><ion-icon name="person-add"></ion-icon></button>
+
+      </ion-item>
+    </ion-card>
+  </ion-list>
+
 </ion-content>

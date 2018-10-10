@@ -28,13 +28,16 @@ export class FriendRequestPage {
   }
 
   searcher(){
-    this.friendsService.getFindFriends(this.search_value).subscribe(
-      (found_users) => {
-        this.found_users = found_users;
-      },
-      (error) => {
-        console.log(error)
-      });
+    if(this.search_value != '' && this.search_value != null ){
+      this.friendsService.getFindFriends(this.search_value, firebase.auth().currentUser.email).subscribe(
+        (found_users) => {
+          this.found_users = found_users;
+          console.log(this.found_users);
+        },
+        (error) => {
+          console.log(error)
+        });
+      }
   }
 
   sendFriendRequest(requested){

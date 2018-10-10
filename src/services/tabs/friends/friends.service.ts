@@ -11,8 +11,8 @@ export class FriendsService {
     return this.httpClient.get("https://fire-backend.herokuapp.com/get/all/friends/by/requester/email/" + requester_email)
   }
 
-  getFindFriends(search_value){
-    return this.httpClient.get("https://fire-backend.herokuapp.com/get/find/friends/" + search_value)
+  getFindFriends(search_value, requester_email_except){
+    return this.httpClient.get("https://fire-backend.herokuapp.com//get/find/friends/" + search_value + "/requester/email/except/" + requester_email_except);
   }
 
   getPendingFriendRequest(){
@@ -25,6 +25,5 @@ export class FriendsService {
       .post('https://fire-backend.herokuapp.com/post/friend',
         JSON.stringify(friend_request), httpOptions).subscribe();
   }
-
 
 }
