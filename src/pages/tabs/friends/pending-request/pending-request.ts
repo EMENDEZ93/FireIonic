@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {FriendsService} from "../../../../services/tabs/friends/friends.service";
-
+import firebase from 'firebase';
 
 @IonicPage()
 @Component({
@@ -10,7 +10,7 @@ import {FriendsService} from "../../../../services/tabs/friends/friends.service"
 })
 export class PendingRequestPage {
 
-  pendingFriendRequest;
+  pendingFriends;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public friendsService: FriendsService) {
   }
@@ -19,8 +19,20 @@ export class PendingRequestPage {
     console.log('ionViewDidLoad PendingRequestPage');
   }
 
-  getPendingFriendRequest(){
+  ionViewWillEnter(){
     this.getPendingFriendRequest();
+  }
+
+
+  getPendingFriendRequest(){
+    this.friendsService.getPendingFriendRequest(firebase.auth().currentUser.email).subscribe(
+    (pendingFriends) =>{ this.pendingFriends = pendingFriends; },
+    (error) => {console.log(error)}
+    );
+  }
+
+  closePendingRequestPage(){
+    this.navCtrl.pop();
   }
 
 }

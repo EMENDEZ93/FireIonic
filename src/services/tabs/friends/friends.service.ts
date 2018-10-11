@@ -15,8 +15,8 @@ export class FriendsService {
     return this.httpClient.get("https://fire-backend.herokuapp.com//get/find/friends/" + search_value + "/requester/email/except/" + requester_email_except);
   }
 
-  getPendingFriendRequest(){
-    return this.httpClient.get("https://fire-backend.herokuapp.com/get/friends/requests")
+  getPendingFriendRequest(requester_email){
+    return this.httpClient.get("https://fire-backend.herokuapp.com/get/all/friends/by/requester/email/" + requester_email + "/status/is/false")
   }
 
   postFriendRequest(friend_request: FriendRequest){

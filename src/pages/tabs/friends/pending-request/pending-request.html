@@ -1,14 +1,14 @@
-<!--
-  Generated template for the PendingRequestPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>pending-request</ion-title>
+    <ion-title>pending request</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="closePendingRequestPage()" >Cancelar</button>
+    </ion-buttons>
+
   </ion-navbar>
+
 
 </ion-header>
 
@@ -16,13 +16,13 @@
 <ion-content padding>
 
   <ion-list>
-    <ion-card ion-item *ngFor="let friend of friends">
+    <ion-card ion-item *ngFor="let pendingFriend of pendingFriends">
       <!--img src="assets/img/bjork-live.jpg" -->
       <ion-item>
 
         <ion-card-title>
-          {{friend.name}}
-          <p>{{friend.email}}</p>
+          {{pendingFriend.name}}
+          <p>{{pendingFriend.email}}</p>
         </ion-card-title>
 
         <button ion-fab mini item-end ><ion-icon name="person-add"></ion-icon></button>
