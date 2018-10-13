@@ -27,14 +27,19 @@ export class FriendsPage {
     );
   }
 
-  getFindFriendModal(){
+  openFindFriendModal(){
     const friendRequestPageModal = this.modal.create('FriendRequestPage');
     friendRequestPageModal.present();
   }
 
-  getPendingFriendRequestModal(){
+  openPendingFriendRequestModal(){
     const pendingRequestPageModal = this.modal.create('PendingRequestPage');
     pendingRequestPageModal.present();
+  }
+
+  openToAnswerFriendRequestPageModal(){
+    const toAnswerFriendRequestPagesModal = this.modal.create('ToAnswerFriendRequestPage');
+    toAnswerFriendRequestPagesModal.present();
   }
 
   deleteFriendRecordRequesterAndRequested(requested_email){

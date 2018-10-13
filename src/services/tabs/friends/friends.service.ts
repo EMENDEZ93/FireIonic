@@ -33,4 +33,9 @@ export class FriendsService {
   }
 
 
+  getAllFriendByRequestedEmailAndStatusIsFalse(requested_email){
+    return this.httpClient.get("https://fire-backend.herokuapp.com/get/all/friends/by/requested/email/"+ requested_email +"/status/is/false");
+  }
+
 }
+

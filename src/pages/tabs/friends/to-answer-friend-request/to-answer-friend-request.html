@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>to-answer-friend-request</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="closeToAnswerFriendRequestPage()" >Cancelar</button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-card ion-item *ngFor="let pending_friend of pending_friends">
+      <!--img src="assets/img/bjork-live.jpg" -->
+      <ion-item>
+
+        <ion-card-title>
+          {{pending_friend.name}}
+          <p>{{pending_friend.email}}</p>
+        </ion-card-title>
+
+        <button ion-fab mini item-end ><ion-icon name="md-remove-circle"></ion-icon></button>
+
+      </ion-item>
+    </ion-card>
+  </ion-list>
+
+</ion-content>
