@@ -37,5 +37,9 @@ export class FriendsService {
     return this.httpClient.get("https://fire-backend.herokuapp.com/get/all/friends/by/requested/email/"+ requested_email +"/status/is/false");
   }
 
+  getChangeFriendRequestStatusByRequestedAndRequester(requested_email, requester_email){
+    return this.httpClient.get("https://fire-backend.herokuapp.com/get/change/friend/request/status/for/requested/"+ requested_email +"/requester/"+ requester_email );
+  }
+
 }
 

@@ -34,4 +34,11 @@ constructor(public navCtrl: NavController, public navParams: NavParams, public f
     );
   }
 
+  getChangeFriendRequestStatusByRequestedAndRequester(requester_email){
+    this.friendsService.getChangeFriendRequestStatusByRequestedAndRequester(firebase.auth().currentUser.email, requester_email).subscribe(
+      (data) =>{ console.log(data) },
+      (error) => {console.log(error)}
+    );
+  }
+
 }

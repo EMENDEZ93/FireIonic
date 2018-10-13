@@ -24,7 +24,7 @@
           <p>{{pending_friend.email}}</p>
         </ion-card-title>
 
-        <button ion-fab mini item-end ><ion-icon name="md-remove-circle"></ion-icon></button>
+        <button ion-fab mini item-end (click)="getChangeFriendRequestStatusByRequestedAndRequester(pending_friend.email)" ><ion-icon name="md-add-circle"></ion-icon></button>
 
       </ion-item>
     </ion-card>
