@@ -20,7 +20,7 @@
           <p>{{friend.email}}</p>
         </ion-card-title>
 
-        <button ion-fab mini item-end ><ion-icon name="md-trash"></ion-icon></button>
+        <button ion-fab mini item-end (click)="deleteFriendRecordRequesterAndRequested(friend.email)"><ion-icon name="md-trash"></ion-icon></button>
 
       </ion-item>
 

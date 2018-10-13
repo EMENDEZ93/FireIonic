@@ -26,4 +26,11 @@ export class FriendsService {
         JSON.stringify(friend_request), httpOptions).subscribe();
   }
 
+  deleteFriendRecordRequesterAndRequested(requester_email, requested_email){
+    const httpOptions = { headers: new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'})};
+    return this.httpClient
+      .delete('https://fire-backend.herokuapp.com/delete/friend/record/requester/'+ requester_email + '/requested/' + requested_email, httpOptions).subscribe();
+  }
+
+
 }

@@ -35,4 +35,8 @@ export class PendingRequestPage {
     this.navCtrl.pop();
   }
 
+  deleteFriendRecordRequesterAndRequested(requested_email){
+    this.friendsService.deleteFriendRecordRequesterAndRequested(firebase.auth().currentUser.email,requested_email);
+  }
+
 }

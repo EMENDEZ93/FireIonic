@@ -37,4 +37,8 @@ export class FriendsPage {
     pendingRequestPageModal.present();
   }
 
+  deleteFriendRecordRequesterAndRequested(requested_email){
+    this.friendsService.deleteFriendRecordRequesterAndRequested(firebase.auth().currentUser.email,requested_email);
+  }
+
 }
