@@ -11,7 +11,7 @@ import firebase from "firebase";
 })
 export class NoteFormPage {
 
-  note
+  note;
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public noteProvider: NoteProvider, public viewController: ViewController) {
     this.note = this.navParams.get("note");

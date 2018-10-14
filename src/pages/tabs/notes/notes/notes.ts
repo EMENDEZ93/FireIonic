@@ -46,4 +46,9 @@ export class NotesPage {
     this.editNoteForm({});
   }
 
+  openNoteInvitationPageModal(){
+    const noteInvitationPageModal = this.modal.create('NoteInvitationPage');
+    noteInvitationPageModal.present();
+  }
+
 }
