@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>note-guests</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-card ion-item *ngFor="let guest of guests">
+      <!--img src="assets/img/bjork-live.jpg" -->
+      <ion-item>
+
+        <ion-card-title>
+          {{guest.name}}
+          <p>{{guest.email}}</p>
+
+        </ion-card-title>
+
+        <button ion-fab mini item-end ><ion-icon name="person-add"></ion-icon></button>
+
+      </ion-item>
+    </ion-card>
+  </ion-list>
+
+</ion-content>

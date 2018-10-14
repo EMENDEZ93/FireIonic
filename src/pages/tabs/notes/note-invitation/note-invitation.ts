@@ -35,6 +35,7 @@ export class NoteInvitationPage {
 
   postInvitation(guest_email){
     this.invitation.guest = guest_email;
+    this.invitation.host = firebase.auth().currentUser.email;
     this.invitation.status = false;
 
     this.noteProvider.postInvitation(this.invitation).subscribe(

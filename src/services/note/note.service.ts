@@ -34,4 +34,10 @@ export class NoteProvider {
     return this.http.get("https://fire-backend.herokuapp.com/get/pending/invitations/to/notes/by/guest/" + guest_email);
   }
 
+  getAllGuestsByNoteIdAndHost(note_id, host_email){
+    console.log(host_email);
+    return this.http.get("https://fire-backend.herokuapp.com//get/all/guests/by/notesid/" + note_id + "/and/host/" + host_email);
+  }
+
+
 }

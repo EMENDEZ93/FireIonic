@@ -56,4 +56,10 @@ export class NotesPage {
     noteInvitationPageModal.present();
   }
 
+
+  openNoteGuestsPageModal(note_id){
+    const NoteGuestsPageModal = this.modal.create('NoteGuestsPage', {note_id: note_id});
+    NoteGuestsPageModal.present();
+  }
+
 }
