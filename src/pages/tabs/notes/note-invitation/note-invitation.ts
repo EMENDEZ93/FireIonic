@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {FriendsService} from "../../../../services/tabs/friends/friends.service";
 import firebase from "firebase";
 import {Invitation} from "../../../../models/note/note-invitation/invitation";
-import {NoteProvider} from "../../../../services/note/note";
+import {NoteProvider} from "../../../../services/note/note.service";
 
 @IonicPage()
 @Component({

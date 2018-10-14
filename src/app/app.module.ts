@@ -13,7 +13,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import {FIREBASE_CONFIG} from "./app.firebase.config";
 import {LoginPage} from "../pages/login/login";
 import {RegisterPage} from "../pages/register/register";
-import { NoteProvider } from '../services/note/note';
+import { NoteProvider } from '../services/note/note.service';
 import { HttpClientModule } from "@angular/common/http";
 import {RegisterService} from "../services/register/register.service";
 

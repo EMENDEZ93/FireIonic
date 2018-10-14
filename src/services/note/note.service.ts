@@ -30,4 +30,8 @@ export class NoteProvider {
       JSON.stringify(invitation), httpOptions);
   }
 
+  getPendingInvitationsToNotesByGuest(guest_email){
+    return this.http.get("https://fire-backend.herokuapp.com/get/pending/invitations/to/notes/by/guest/" + guest_email);
+  }
+
 }

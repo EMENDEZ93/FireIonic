@@ -46,6 +46,11 @@ export class NotesPage {
     this.editNoteForm({});
   }
 
+  pendingNotifications(){
+    const NotePendingInvitationsPageModal = this.modal.create('NotePendingInvitationsPage');
+    NotePendingInvitationsPageModal.present();
+  }
+
   openNoteInvitationPageModal(note_id){
     const noteInvitationPageModal = this.modal.create('NoteInvitationPage', {note_id: note_id});
     noteInvitationPageModal.present();
