@@ -18,8 +18,13 @@
           {{friend.name}}
           <p>{{friend.email}}</p>
         </ion-card-title>
+
+        <button ion-fab mini item-end (click)="postInvitation(friend.email)" ><ion-icon name="md-add-circle"></ion-icon></button>
+
       </ion-item>
     </ion-card>
+
+
 
   </ion-list>
 

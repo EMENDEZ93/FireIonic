@@ -15,7 +15,7 @@
         <ion-card-title>
           {{note.title}}
         </ion-card-title>
-        <button ion-fab mini item-end (click)="openNoteInvitationPageModal()" ><ion-icon name="md-share"></ion-icon></button>
+        <button ion-fab mini item-end (click)="openNoteInvitationPageModal(note.id)" ><ion-icon name="md-share"></ion-icon></button>
         <button ion-fab mini item-end (click)="editNoteForm(note)" ><ion-icon name="create"></ion-icon></button>
         <button ion-fab mini item-end (click)="deleteNote(note.id)"><ion-icon name="trash"></ion-icon></button>
       </ion-item>

@@ -46,8 +46,8 @@ export class NotesPage {
     this.editNoteForm({});
   }
 
-  openNoteInvitationPageModal(){
-    const noteInvitationPageModal = this.modal.create('NoteInvitationPage');
+  openNoteInvitationPageModal(note_id){
+    const noteInvitationPageModal = this.modal.create('NoteInvitationPage', {note_id: note_id});
     noteInvitationPageModal.present();
   }
 
