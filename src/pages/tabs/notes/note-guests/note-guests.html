@@ -17,7 +17,7 @@
         <ion-card-title>
           {{guest.name}}
           <p>{{guest.email}}</p>
-
+          <p> {{getInvitationStatusByNoteIdAndGuest(guest.email) ? 'aceptado' : 'pendiente' }}</p>
         </ion-card-title>
 
         <button ion-fab mini item-end ><ion-icon name="person-add"></ion-icon></button>

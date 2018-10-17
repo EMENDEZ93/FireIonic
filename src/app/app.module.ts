@@ -24,6 +24,7 @@ import {SettingPageModule} from "../pages/tabs/setting/setting.module";
 import {CalendarPageModule} from "../pages/tabs/calendar/calendar.module";
 import {NotesService} from "../services/tabs/notes/notes.service";
 import {FriendsService} from "../services/tabs/friends/friends.service";
+import {InvitationService} from "../services/tabs/notes/invitation.service";
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import {FriendsService} from "../services/tabs/friends/friends.service";
     NoteProvider,
     RegisterService,
     NotesService,
-    FriendsService
+    FriendsService,
+    InvitationService
   ]
 })
 export class AppModule {}
