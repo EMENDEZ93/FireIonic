@@ -20,7 +20,9 @@
           <p> {{guest.status ? 'aceptado' : 'pendiente' }}</p>
         </ion-card-title>
 
-        <button ion-fab mini item-end ><ion-icon name="person-add"></ion-icon></button>
+        <button ion-fab mini item-end >
+          <ion-icon name="{{guest.status ? 'md-checkmark-circle' : 'md-close-circle' }}"></ion-icon>
+        </button>
 
       </ion-item>
     </ion-card>
