@@ -11,6 +11,11 @@ export class NotesService {
     return this.httpClient.get("https://fire-backend.herokuapp.com/notes/user/" + idFirebase);
   }
 
+  getAllForeignNotesByEmailGuest(emailGuest){
+    return this.httpClient
+      .get("https://fire-backend.herokuapp.com/get/all/foreign/notes/by/email/guest/" + emailGuest);
+  }
+
   deleteNote(id){
     return this.httpClient.get("https://fire-backend.herokuapp.com/note/" + id + "/delete");
   }

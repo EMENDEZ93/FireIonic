@@ -21,9 +21,15 @@ export class NotesPage {
 
   ionViewWillEnter(){
     this.notesService.getNotesByIdFirabase(firebase.auth().currentUser.uid).subscribe(
-      (data) =>{ this.notes = data; },
+      (data) =>{ this.notes = data; console.log(data);},
       (error) => {console.log(error)}
     );
+
+    this.notesService.getAllForeignNotesByEmailGuest(firebase.auth().currentUser.email).subscribe(
+      (data) =>{ this.notes = data; console.log(data);},
+      (error) => {console.log(error)}
+    );
+
   }
 
 
